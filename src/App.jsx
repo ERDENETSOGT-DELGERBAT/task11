@@ -2,6 +2,7 @@
 import StudentProfileCard from './StudentProfileCard.jsx';
 import ProfileCard from './ProfileCard.jsx';
 import NotificationList from './NotificationList.jsx';
+import Card from './Card.jsx';
 
 function App() {
   return (
@@ -51,8 +52,30 @@ function App() {
 
       <NotificationList />
 
+      <section className="practice-section">
+        <p className="eyebrow">PRACTICE EXERCISE 3</p>
+        <h2>Reusable Card Component</h2>
+
+        <div className="content-card-grid">
+          <Card title="Lecture Topics">
+            <ul className="card-list">
+              <li>React Components</li>
+              <li>Props</li>
+              <li>Rendering Lists</li>
+            </ul>
+          </Card>
+
+          <Card title="Homework">
+            <p>
+              Build a React Portfolio Gallery using reusable
+              components, project data, and technology filters.
+            </p>
+          </Card>
+        </div>
+      </section>
+
       <footer className="page-footer">
-        Web Programming · Task 11-A · React Components & Props
+        Web Programming · Week 11 · React Components & Props
       </footer>
     </main>
   );
