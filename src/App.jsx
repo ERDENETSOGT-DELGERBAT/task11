@@ -3,6 +3,7 @@ import StudentProfileCard from './StudentProfileCard.jsx';
 import ProfileCard from './ProfileCard.jsx';
 import NotificationList from './NotificationList.jsx';
 import Card from './Card.jsx';
+import CourseCatalog from './CourseCatalog.jsx';
 
 function App() {
   return (
@@ -73,6 +74,8 @@ function App() {
           </Card>
         </div>
       </section>
+
+      <CourseCatalog />
 
       <footer className="page-footer">
         Web Programming · Week 11 · React Components & Props
