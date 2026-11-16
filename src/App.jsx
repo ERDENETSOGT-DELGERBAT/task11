@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import StudentProfileCard from './StudentProfileCard.jsx';
 import ProfileCard from './ProfileCard.jsx';
 import NotificationList from './NotificationList.jsx';
@@ -6,6 +7,18 @@ import Card from './Card.jsx';
 import CourseCatalog from './CourseCatalog.jsx';
 
 function App() {
+  useEffect(() => {
+    const sectionId = window.location.hash.slice(1);
+
+    if (sectionId) {
+      requestAnimationFrame(() => {
+        document.getElementById(sectionId)?.scrollIntoView({
+          block: 'start'
+        });
+      });
+    }
+  }, []);
+
   return (
     <main className="app-container">
       <header className="page-header">
@@ -14,7 +27,11 @@ function App() {
         <p className="subtitle">Computer Engineering · Year 2</p>
       </header>
 
-      <section className="student-grid" aria-label="Student profiles">
+      <section
+        className="student-grid"
+        id="student-directory"
+        aria-label="Student profiles"
+      >
         <StudentProfileCard
           name="Erdenetsogt Delgerbat"
           studentId="202539430"
@@ -40,7 +57,7 @@ function App() {
         />
       </section>
 
-      <section className="practice-section">
+      <section className="practice-section" id="exercise-1">
         <p className="eyebrow">PRACTICE EXERCISE 1</p>
         <h2>Profile Card Component</h2>
 
@@ -51,9 +68,11 @@ function App() {
         />
       </section>
 
-      <NotificationList />
+      <section id="exercise-2">
+        <NotificationList />
+      </section>
 
-      <section className="practice-section">
+      <section className="practice-section" id="exercise-3">
         <p className="eyebrow">PRACTICE EXERCISE 3</p>
         <h2>Reusable Card Component</h2>
 
@@ -75,7 +94,9 @@ function App() {
         </div>
       </section>
 
-      <CourseCatalog />
+      <section id="course-catalog">
+        <CourseCatalog />
+      </section>
 
       <footer className="page-footer">
         Web Programming · Week 11 · React Components & Props
