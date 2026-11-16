@@ -103,7 +103,8 @@ body {
   border-top: 1px solid #d7cfc4;
 }
 
-.practice-section h2 {
+.practice-section h2,
+.notification-section h2 {
   margin: 8px 0 22px;
   color: #752d40;
   font-size: 25px;
@@ -130,8 +131,8 @@ body {
   width: 80px;
   height: 80px;
   margin-bottom: 16px;
-  border-radius: 50%;
   border: 2px solid #dfd1c8;
+  border-radius: 50%;
   object-fit: cover;
 }
 
@@ -151,6 +152,51 @@ body {
   color: #752d40;
   font-size: 13px;
   font-weight: bold;
+}
+
+.notification-section {
+  margin-top: 55px;
+  padding-top: 30px;
+  border-top: 1px solid #d7cfc4;
+}
+
+.notification-list {
+  display: grid;
+  gap: 12px;
+  max-width: 700px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 20px;
+  border: 1px solid #dfd1c8;
+  border-left: 4px solid #8b9691;
+  border-radius: 7px;
+  background: #fffaf4;
+  color: #514943;
+  font-size: 14px;
+}
+
+.notification-icon {
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.notification-item.success {
+  border-left-color: #278653;
+}
+
+.notification-item.warning {
+  border-left-color: #d18a24;
+}
+
+.notification-item.info {
+  border-left-color: #557aa8;
 }
 
 .page-footer {
