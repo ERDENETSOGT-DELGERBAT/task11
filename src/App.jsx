@@ -1,6 +1,7 @@
 
 import StudentProfileCard from './StudentProfileCard.jsx';
 import ProfileCard from './ProfileCard.jsx';
+import NotificationList from './NotificationList.jsx';
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
           email="muhiddin@gachon.ac.kr"
         />
       </section>
+
+      <NotificationList />
 
       <footer className="page-footer">
         Web Programming · Task 11-A · React Components & Props
