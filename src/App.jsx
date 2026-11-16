@@ -1,5 +1,6 @@
 
 import StudentProfileCard from './StudentProfileCard.jsx';
+import ProfileCard from './ProfileCard.jsx';
 
 function App() {
   return (
@@ -33,6 +34,17 @@ function App() {
           major="Computer Engineering"
           year={2}
           gpa="3.8"
+        />
+      </section>
+
+      <section className="practice-section">
+        <p className="eyebrow">PRACTICE EXERCISE 1</p>
+        <h2>Profile Card Component</h2>
+
+        <ProfileCard
+          name="Dr. Toshpulatov"
+          role="Professor"
+          email="muhiddin@gachon.ac.kr"
         />
       </section>
 
